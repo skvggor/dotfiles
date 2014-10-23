@@ -1,0 +1,38 @@
+'global':
+  'exception-reporting':
+    'userId': '25bec43b-01e2-0c9a-94e7-5f73c9bc71f0'
+  'release-notes':
+    'viewedVersion': '0.96.0-4fa0b6e'
+  'welcome':
+    'showOnStartup': false
+  'metrics':
+    'userId': '7b089b9d-5f80-2fd5-2fd1-345f08cec260'
+  'editor':
+    'fontFamily': 'Consolas'
+    'showInvisibles': true
+    'softWrap': true
+    'showIndentGuide': true
+    'softWrapAtPreferredLineLength': true
+    'scrollPastEnd': true
+    'invisibles':
+      'eol': '—'
+    'tabLength': 4
+    'lineHeight': 1
+    'fontSize': 20
+  'core':
+    'useReactEditor': true
+    'themes': [
+      'seti-ui'
+      'no-caffeine-syntax'
+    ]
+  'gofmt':
+    'pathToBinary': '/usr/local/go/bin/gofmt'
+  'linter':
+    'showStatusBarWhenCursorIsInErrorRange': true
+  'atom-beautify':
+    '_analyticsUserId': 'ad472e38-711d-45b8-a81a-fb75f4c2548e'
+    'beautifyEntireFileOnSave': false
+    'analytics': false
+    'html_indent_size': 4
+    'css_indent_size': 4
+    'js_indent_size': 4
