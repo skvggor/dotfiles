@@ -1,35 +1,26 @@
 {
-	"bold_folder_labels": true,
-	"caret_style": "smooth",
-	"color_scheme": "Packages/Dracula Color Scheme/Dracula.tmTheme",
+	"caret_extra_bottom": 3,
+	"caret_extra_top": 3,
+	"caret_extra_width": 2,
+	"color_scheme": "Packages/One Dark Color Scheme/One Dark.tmTheme",
 	"draw_white_space": "all",
+	"ensure_newline_at_eof_on_save": true,
 	"fold_buttons": false,
 	"font_face": "Consolas",
-	"font_options":
-	[
-		"subpixel_antialias"
-	],
-	"font_size": 14,
+	"font_size": 16,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
-		"SideBarEnhancements",
-		"Better CoffeeScript",
-		"HTML5",
-		"GoSublime",
-		"WordPress",
-		"Markdown Extended",
-		"Vintage",
-		"Git"
+		"Vintage"
 	],
-	"line_padding_bottom": 2,
-	"line_padding_top": 2,
-	"margin": 0,
+	"overlay_scroll_bars": "enabled",
 	"rulers":
 	[
 		80
 	],
-	"tab_size": 4,
-	"translate_tabs_to_spaces": true
+	"show_encoding": true,
+	"theme": "Seti.sublime-theme",
+	"trim_trailing_white_space_on_save": true,
+	"wrap_width": true
 }
