@@ -16,7 +16,7 @@ set fish_greeting ""
 if test (uname) = Darwin
 	alias sassc="~/Projects/sassc/bin/./sassc"
 	alias subl="open -a /Applications/Sublime\ Text.app/Contents/MacOS/Sublime\ Text"
-	alias chm="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --kiosk"
+	alias chm="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 end
 
 Theme 'l'
