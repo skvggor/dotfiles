@@ -1,0 +1,18 @@
+# apm list --installed | grep @ | awk '{print $2}' > packages
+
+Zen@0.16.2
+atom-material-syntax@0.2.3
+atom-material-ui@0.6.0
+build@0.44.0
+editorconfig@1.1.1
+emmet@2.3.12
+esformatter@1.9.0
+file-icons@1.6.9
+jshint@1.4.0
+language-cshtml@0.1.1
+language-elixir@0.5.2
+language-fish-shell@1.0.2
+language-sass@0.40.1
+language-stylus@0.2.0
+minimap@4.13.1
+pigments@0.11.0
