@@ -1,0 +1,6 @@
+bower
+empty-trash
+grunt-cli
+hicat
+npm
+# sudo npm -g -p --depth 0 ls | awk -F "/" '{if (NR > 1) print $NF}' > packages; and echo \# (history | grep -m 1 npm) >> packages
