@@ -1,3 +1,5 @@
+# apm-beta list --installed | grep @ | awk '{print $2}' > packages
+
 Zen@0.16.3
 activate-power-mode@0.4.1
 an-old-hope-syntax@0.4.1
