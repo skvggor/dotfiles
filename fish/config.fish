@@ -1,16 +1,9 @@
-# Path to your oh-my-fish.
-set -g OMF_PATH $HOME/.local/share/omf
+set me (whoami)
 
-# Path to your oh-my-fish configuration.
-set -g OMF_CONFIG $HOME/.config/omf
+set fisher_home ~/.local/share/fisherman
+set fisher_config ~/.config/fisherman
 
-### Configuration required to load oh-my-fish ###
-# Note: Only add configurations that are required to be set before oh-my-fish is loaded.
-# For common configurations, we advise you to add them to your $OMF_CONFIG/init.fish file or
-# to create a custom plugin instead.
-
-# Load oh-my-fish configuration.
-source $OMF_PATH/init.fish
+source $fisher_home/config.fish
 
 set fish_greeting ""
 
@@ -33,11 +26,11 @@ if test (uname) = Darwin
 	end
 
 	function frio
-		python /Users/marcos.garcia/Projects/Labs/snow.py
+		python /Users/$me/Projects/Labs/snow.py
 	end
 
 	# Go Lang
-	set -x GOPATH /Users/marcos.garcia/Projects/Labs/go
+	set -x GOPATH /Users/$me/Projects/Labs/go
 end
 
 function git-ci-fbiz
