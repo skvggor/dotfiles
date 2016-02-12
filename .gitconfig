@@ -9,4 +9,4 @@
 [push]
 	default = simple
 [core]
-	editor = nano
+	editor = nvim
