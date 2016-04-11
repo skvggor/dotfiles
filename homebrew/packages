@@ -1,5 +1,6 @@
 apr
 apr-util
+asciinema
 autoconf
 automake
 boost
@@ -15,6 +16,7 @@ gettext
 git-extras
 glib
 gmp
+gnupg
 go
 gotty
 httpd22
@@ -26,10 +28,13 @@ isl
 jpeg
 libevent
 libffi
+libgpg-error
+libksba
 libmpc
 libpng
 libtiff
 libtool
+libyaml
 mercurial
 mod_fastcgi
 mpfr
@@ -50,4 +55,4 @@ unixodbc
 wget
 xz
 zlib
-# brew list > packages | echo \# (history | grep -m 1 npm) >> packages
+# brew list > packages; and echo \# (history | grep -m 1 npm) >> packages
