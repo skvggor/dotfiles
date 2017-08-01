@@ -83,7 +83,11 @@ pygobject
 pygtk
 python
 python3
+rbenv
 readline
+ruby
+ruby-build
+ruby@2.2
 shared-mime-info
 sqlite
 terminator
