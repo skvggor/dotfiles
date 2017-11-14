@@ -1,5 +1,4 @@
 set me (whoami)
-
 set fisher_home ~/.local/share/fisherman
 set fisher_config ~/.config/fisherman
 
@@ -13,17 +12,21 @@ if test (uname) = Darwin
 		open -a /Applications/Atom\ Beta.app/Contents/MacOS/Atom $argv;
 	end
 
-        function subl
-                open -a /Applications/Sublime\ Text.app/Contents/MacOS/Sublime\ Text
-        end
+	function code
+		open -a /Applications/Visual\ Studio\ Code.app/Contents/MacOS/Electron $argv;
+	end
+
+	function subl
+		open -a /Applications/Sublime\ Text.app/Contents/MacOS/Sublime\ Text
+	end
 
 	function brackets
 		open -a /Applications/Brackets.app/Contents/MacOS/Brackets $argv;
 	end
 
-        function chm
-                /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome $argv;
-        end
+	function chm
+		/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome $argv;
+	end
 
 	function spo
 		/Applications/Spotify.app/Contents/MacOS/Spotify &
@@ -46,7 +49,7 @@ function git-ci-fbiz
 end
 
 function g
-        grunt $argv;
+	grunt $argv;
 end
 
 set -g fish_user_paths "/usr/local/opt/ruby/bin" $fish_user_paths
