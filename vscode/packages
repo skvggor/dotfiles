@@ -1,0 +1,20 @@
+Alan.stylus-0.0.4
+EditorConfig.editorconfig-0.11.1
+TeddyDD.fish-0.0.4
+Tyriar.sort-lines-1.3.0
+WakaTime.vscode-wakatime-1.1.21
+bungcip.better-toml-0.3.1
+dbaeumer.vscode-eslint-1.4.3
+dustinsanders.an-old-hope-theme-vscode-3.1.1
+emmanuelbeziat.vscode-great-icons-2.1.20
+howardzuo.vscode-esformatter-1.5.2
+idleberg.applescript-0.9.2
+ifaxity.onedark-1.3.0
+robinbentley.sass-indented-1.4.5
+samverschueren.linter-xo-2.1.3
+shyykoserhiy.vscode-spotify-2.2.1
+sysoev.language-stylus-1.8.0
+vincaslt.highlight-matching-tag-0.4.4
+vtfn.stylint-0.0.2
+
+# ls -la ~/.vscode/extensions/ | awk '{print $NF}' > packages
