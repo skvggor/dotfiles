@@ -1,0 +1,19 @@
+==================== SSR started ====================
+SimpleScreenRecorder 0.3.8
+Compiled with GCC 7.2.0
+Qt: header 5.9.2, lib 5.9.5
+libavformat: header 57.83.100, lib 57.83.100
+libavcodec: header 57.107.100, lib 57.107.100
+libavutil: header 55.78.100, lib 55.78.100
+libswscale: header 4.8.100, lib 4.8.100
+[CPUFeatures::Detect] CPU features: mmx sse sse2 sse3 ssse3 sse4_1 sse4_2 avx avx2 bmi1 bmi2
+[ALSAInput::GetSourceList] Generating source list ...
+[ALSAInput::GetSourceList] Found card: [hw:0] HDA Intel PCH
+[ALSAInput::GetSourceList] Found device: [hw:0,0] HDA Intel PCH: ALC3204 Analog
+[ALSAInput::GetSourceList] Found card: [hw:1] Logitech USB Headset
+[ALSAInput::GetSourceList] Found device: [hw:1,0] Logitech USB Headset: USB Audio
+[PulseAudioInput::GetSourceList] Generating source list ...
+[SourceNamesCallback] Found source: [alsa_output.usb-Logitech_Logitech_USB_Headset-00.analog-stereo.monitor] Monitor of Headset H390 Analog Stereo
+[SourceNamesCallback] Found source: [alsa_input.usb-Logitech_Logitech_USB_Headset-00.analog-mono] Headset H390 Analog Mono
+[SourceNamesCallback] Found source: [alsa_output.pci-0000_00_1f.3.analog-stereo.monitor] Monitor of Built-in Audio Analog Stereo
+[SourceNamesCallback] Found source: [alsa_input.pci-0000_00_1f.3.analog-stereo] Built-in Audio Analog Stereo

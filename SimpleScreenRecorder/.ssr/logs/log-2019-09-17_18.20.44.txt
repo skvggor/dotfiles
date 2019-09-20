@@ -1,0 +1,70 @@
+==================== SSR started ====================
+SimpleScreenRecorder 0.3.8
+Compiled with GCC 7.2.0
+Qt: header 5.9.2, lib 5.9.5
+libavformat: header 57.83.100, lib 57.83.100
+libavcodec: header 57.107.100, lib 57.107.100
+libavutil: header 55.78.100, lib 55.78.100
+libswscale: header 4.8.100, lib 4.8.100
+[CPUFeatures::Detect] CPU features: mmx sse sse2 sse3 ssse3 sse4_1 sse4_2 avx avx2 bmi1 bmi2
+[ALSAInput::GetSourceList] Generating source list ...
+[ALSAInput::GetSourceList] Found card: [hw:0] HDA Intel PCH
+[ALSAInput::GetSourceList] Found device: [hw:0,0] HDA Intel PCH: ALC3204 Analog
+[ALSAInput::GetSourceList] Found card: [hw:1] Logitech USB Headset
+[ALSAInput::GetSourceList] Found device: [hw:1,0] Logitech USB Headset: USB Audio
+[PulseAudioInput::GetSourceList] Generating source list ...
+[SourceNamesCallback] Found source: [alsa_output.usb-Logitech_Logitech_USB_Headset-00.analog-stereo.monitor] Monitor of Headset H390 Analog Stereo
+[SourceNamesCallback] Found source: [alsa_input.usb-Logitech_Logitech_USB_Headset-00.analog-mono] Headset H390 Analog Mono
+[SourceNamesCallback] Found source: [alsa_output.pci-0000_00_1f.3.analog-stereo.monitor] Monitor of Built-in Audio Analog Stereo
+[SourceNamesCallback] Found source: [alsa_input.pci-0000_00_1f.3.analog-stereo] Built-in Audio Analog Stereo
+[PageRecord::StartPage] Starting page ...
+[PageRecord::StartPage] Started page.
+[PageRecord::StartOutput] Starting output ...
+[Muxer::Init] Using format mp4 (MP4 (MPEG-4 Part 14)).
+[Muxer::AddStream] Using codec libx264 (libx264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10).
+[VideoEncoder::PrepareStream] Using pixel format nv12.
+[libx264 @ 0x55bc5930b580] using SAR=1/1
+[libx264 @ 0x55bc5930b580] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 0x55bc5930b580] profile High, level 4.0
+[libx264 @ 0x55bc5930b580] 264 - core 152 r2854 e9a5903 - H.264/MPEG-4 AVC codec - Copyleft 2003-2017 - http://www.videolan.org/x264.html - options: cabac=1 ref=1 deblock=1:0:0 analyse=0x3:0x3 me=dia subme=1 psy=1 psy_rd=1,00:0,00 mixed_ref=0 me_range=16 chroma_me=1 trellis=0 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=0 threads=8 lookahead_threads=1 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=1 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc=crf mbtree=0 crf=23,0 qcomp=0,60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1,40 pb_ratio=1,30 aq=1:1,00
+[BaseEncoder::EncoderThread] Encoder thread started.
+[PageRecord::StartOutput] Started output.
+[Muxer::MuxerThread] Muxer thread started.
+[Synchronizer::SynchronizerThread] Synchronizer thread started.
+[PageRecord::StartInput] Starting input ...
+[X11Input::Init] Using X11 shared memory.
+[PageRecord::StartInput] Started input.
+[X11Input::InputThread] Input thread started.
+[PageRecord::StopOutput] Stopping output ...
+[PageRecord::StopOutput] Stopped output.
+[PageRecord::StopInput] Stopping input ...
+[X11Input::~X11Input] Stopping input thread ...
+[X11Input::InputThread] Input thread stopped.
+[PageRecord::StopInput] Stopped input.
+[PageRecord::StopPage] Stopping page ...
+[Synchronizer::~Synchronizer] Stopping synchronizer thread ...
+[Synchronizer::SynchronizerThread] Synchronizer thread stopped.
+[Muxer::Finish] Finishing encoders ...
+[BaseEncoder::EncoderThread] Flushing encoder ...
+[BaseEncoder::EncoderThread] Encoder thread stopped.
+[Muxer::MuxerThread] Muxer thread stopped.
+[Muxer::~Muxer] Stopping encoders ...
+[Muxer::~Muxer] Waiting for muxer thread to stop ...
+[BaseEncoder::~BaseEncoder] Stopping encoder thread ...
+[libx264 @ 0x55bc5930b580] frame I:10    Avg QP: 8,28  size:146483
+[libx264 @ 0x55bc5930b580] frame P:567   Avg QP:13,64  size:  7135
+[libx264 @ 0x55bc5930b580] frame B:1414  Avg QP:12,37  size:   772
+[libx264 @ 0x55bc5930b580] consecutive B-frames:  3,6%  4,1%  3,3% 89,0%
+[libx264 @ 0x55bc5930b580] mb I  I16..4: 67,3%  9,5% 23,2%
+[libx264 @ 0x55bc5930b580] mb P  I16..4:  4,3%  0,6%  0,7%  P16..4:  4,3%  0,0%  0,0%  0,0%  0,0%    skip:90,1%
+[libx264 @ 0x55bc5930b580] mb B  I16..4:  0,1%  0,0%  0,0%  B16..8:  1,0%  0,0%  0,0%  direct: 0,5%  skip:98,3%  L0:36,6% L1:61,0% BI: 2,4%
+[libx264 @ 0x55bc5930b580] 8x8 transform intra:10,7% inter:27,2%
+[libx264 @ 0x55bc5930b580] coded y,uvDC,uvAC intra: 19,4% 12,7% 8,4% inter: 0,5% 0,8% 0,1%
+[libx264 @ 0x55bc5930b580] i16 v,h,dc,p: 70% 27%  1%  2%
+[libx264 @ 0x55bc5930b580] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 10% 36% 18%  5%  6%  3% 10%  2% 10%
+[libx264 @ 0x55bc5930b580] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 28% 32% 14%  4%  4%  3%  6%  3%  7%
+[libx264 @ 0x55bc5930b580] i8c dc,h,v,p: 80% 13%  5%  1%
+[libx264 @ 0x55bc5930b580] Weighted P-Frames: Y:0,4% UV:0,4%
+[libx264 @ 0x55bc5930b580] kb/s:795,86
+[PageRecord::StopPage] Stopped page.
+==================== SSR stopped ====================
