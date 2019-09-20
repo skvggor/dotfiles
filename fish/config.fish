@@ -15,3 +15,11 @@ end
 function .
 	thunar .
 end
+
+function ns
+	npm start
+end
+
+function nrb
+	npm run build
+end
