@@ -13,7 +13,7 @@ function camera
 end
 
 function .
-	thunar .
+	thunar $argv
 end
 
 function ns
@@ -22,4 +22,8 @@ end
 
 function nrb
 	npm run build
+end
+
+function postman
+	/bin/Postman/./Postman
 end
