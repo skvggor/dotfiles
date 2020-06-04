@@ -27,3 +27,11 @@ end
 function postman
 	/bin/Postman/./Postman
 end
+
+function android-studio
+	/opt/android-studio/bin/./studio.sh
+end
+
+# THEME PURE #
+set fish_function_path /home/marcos/.config/fish/functions/theme-pure/functions/ $fish_function_path
+source /home/marcos/.config/fish/functions/theme-pure/conf.d/pure.fish
