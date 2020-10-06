@@ -10,6 +10,7 @@ flameshot \
 fonts-noto-color-emoji \
 gimp \
 git \
+gnome-terminal \
 gnupg \
 gpick \
 inkscape \
@@ -32,16 +33,16 @@ echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo s
 # global npm packages
 sudo npm i -g -d \
 begynner \
-bower \
+# bower \
 easy-rename \
 gtop \
-gulp \
-gulp-cli \
+# gulp \
+# gulp-cli \
 n \
-ngrok \
+# ngrok \
 npx \
-svgo \
-yarn;
+svgo;
+# yarn;
 
 # vscode
 {
@@ -61,20 +62,11 @@ yarn;
 	sudo apt --fix-broken install && rm -rf ~/temp;
 }
 
-# hyper terminal
-{
-	mkdir ~/temp && cd ~/temp && \
-	wget "https://releases.hyper.is/download/deb" -O hyper.deb && sudo dpkg -i hyper.deb && \
-	cd ../ && rm -rf ~/temp;
-} || {
-	sudo apt --fix-broken install && rm -rf ~/temp;
-}
-
-# virtualbox
-{
-	mkdir ~/temp && cd ~/temp && \
-	wget "https://download.virtualbox.org/virtualbox/6.0.12/virtualbox-6.0_6.0.12-133076~Ubuntu~bionic_amd64.deb" -O vbox.deb && sudo dpkg -i vbox.deb && \
-	cd ../ && rm -rf ~/temp;
-} || {
-	sudo apt --fix-broken install && rm -rf ~/temp;
-}
+# # virtualbox
+# {
+# 	mkdir ~/temp && cd ~/temp && \
+# 	wget "https://download.virtualbox.org/virtualbox/6.0.12/virtualbox-6.0_6.0.12-133076~Ubuntu~bionic_amd64.deb" -O vbox.deb && sudo dpkg -i vbox.deb && \
+# 	cd ../ && rm -rf ~/temp;
+# } || {
+# 	sudo apt --fix-broken install && rm -rf ~/temp;
+# }
