@@ -1,4 +1,4 @@
-64
+61
 adobe-dingbats /usr/share/fonts/X11/encodings/adobe-dingbats.enc.gz
 adobe-standard /usr/share/fonts/X11/encodings/adobe-standard.enc.gz
 adobe-symbol /usr/share/fonts/X11/encodings/adobe-symbol.enc.gz
@@ -9,10 +9,7 @@ big5.cp950-0 /usr/share/fonts/X11/encodings/large/big5.eten-0.enc.gz
 big5.eten-0 /usr/share/fonts/X11/encodings/large/big5.eten-0.enc.gz
 big5hkscs-0 /usr/share/fonts/X11/encodings/large/big5hkscs-0.enc.gz
 cns11643-1 /usr/share/fonts/X11/encodings/large/cns11643-1.enc.gz
-cns11643-1 /usr/share/fonts/X11/encodings/large/cns11643-1.enc.gz
 cns11643-2 /usr/share/fonts/X11/encodings/large/cns11643-2.enc.gz
-cns11643-2 /usr/share/fonts/X11/encodings/large/cns11643-2.enc.gz
-cns11643-3 /usr/share/fonts/X11/encodings/large/cns11643-3.enc.gz
 cns11643-3 /usr/share/fonts/X11/encodings/large/cns11643-3.enc.gz
 dec-special /usr/share/fonts/X11/encodings/dec-special.enc.gz
 gb18030-0 /usr/share/fonts/X11/encodings/large/gb18030-0.enc.gz
