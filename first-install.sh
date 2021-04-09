@@ -40,7 +40,7 @@ xscreensaver \
 xscreensaver-data-extra \
 xscreensaver-gl-extra;
 
-# nodejs: current (2019) 12.x
+# nodejs: current (2021) 15.x
 curl -sL https://deb.nodesource.com/setup_15.x | sudo -E bash - && sudo apt install -y nodejs && \
 echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
 
