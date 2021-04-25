@@ -12,6 +12,10 @@ function camera
 	mplayer tv:// -tv driver=v4l2:width=640:height=480 -vo xv
 end
 
+function o
+	open $argv
+end
+
 function .
 	thunar $argv
 end
@@ -40,9 +44,9 @@ function sshadd
 	eval (ssh-agent -c)
 end
 
-# function dockercptheme
-#     docker cp /home/marcker/Projects/fbiz/honda-hsf/docroot/themes/custom/blog 8783f644c1be:/var/www/html/web/core/themes
-# end
+function dockercptheme
+    docker cp /home/marcker/Projects/fbiz/honda-hsf/docroot/themes/custom/blog 8783f644c1be:/var/www/html/web/core/themes
+end
 
 function code
 	/usr/bin/./code-insiders $argv
