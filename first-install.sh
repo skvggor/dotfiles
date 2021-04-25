@@ -1,6 +1,19 @@
 # !/bin/sh
 
 # tools for linux
+cp -rv fish/config.fish ~/.config/fish;
+
+cp -rv .gitconfig ~/.gitconfig;
+
+sudo cp -rv sources.list.d/* /etc/apt/sources.list.d;
+
+sudo cp -rv fonts/opentype/* /usr/share/fonts/opentype;
+sudo cp -rv fonts/truetype/* /usr/share/fonts/truetype;
+
+sudo cp -rv SimpleScreenRecorder/.ssr/* ~/.ssr;
+
+mkdir ~/Google\ Drive;
+
 sudo apt update && sudo apt install \
 audacity \
 ca-certificates \
@@ -35,10 +48,13 @@ unetbootin \
 vim \
 vlc \
 wine \
-xclip \
-xscreensaver \
-xscreensaver-data-extra \
-xscreensaver-gl-extra;
+xclip;
+# xscreensaver \
+# xscreensaver-data-extra \
+# xscreensaver-gl-extra;
+
+sudo snap install heroku terminology;
+curl https://rclone.org/install.sh | sudo bash;
 
 # nodejs: current (2021) 15.x
 curl -sL https://deb.nodesource.com/setup_15.x | sudo -E bash - && sudo apt install -y nodejs && \
