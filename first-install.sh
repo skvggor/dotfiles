@@ -1,11 +1,11 @@
 # !/bin/sh
 
 # tools for linux
-cp -rv fish/config.fish ~/.config/fish;
+cp -rv fish/config.fish ~/.config/fish/config.fish;
 
 cp -rv .gitconfig ~/.gitconfig;
 
-sudo cp -rv sources.list.d/* /etc/apt/sources.list.d;
+# sudo cp -rv sources.list.d/* /etc/apt/sources.list.d;
 
 sudo cp -rv fonts/opentype/* /usr/share/fonts/opentype;
 sudo cp -rv fonts/truetype/* /usr/share/fonts/truetype;

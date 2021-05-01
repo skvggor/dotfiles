@@ -1,0 +1,4 @@
+- mysql workbench
+- sourcelist / PPAs (fix!)
+- permission fonts
+- docker (see postinstall)
