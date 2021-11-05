@@ -1,0 +1,16 @@
+import:
+        - /home/marcker/.config/alacritty/plugins/challenger-deep.yml
+font:
+        normal:
+                family: 'Iosevka SS04'
+        size: 15.0
+        use_thin_strokes: false
+background_opacity: 0.9
+cursor: 
+        style: Beam
+shell:
+        program: /bin/bash
+        args:
+                - -l
+                - -c
+                - "tmux attach || tmux"
