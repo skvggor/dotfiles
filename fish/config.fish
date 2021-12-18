@@ -45,13 +45,17 @@ function sshadd
 end
 
 function dockercptheme
-    docker cp /home/marcker/Projects/fbiz/honda-hsf/docroot/themes/custom/blog 8783f644c1be:/var/www/html/web/core/themes
+	docker cp /home/marcker/Projects/fbiz/honda-hsf/docroot/themes/custom/blog 8783f644c1be:/var/www/html/web/core/themes
 end
 
 function code
 	/usr/bin/./code-insiders $argv
 end
 
+function ls
+	lsd $argv
+end
+
 # THEME PURE #
-#set fish_function_path /home/marcos/.config/fish/functions/theme-pure/functions/ $fish_function_path
-#source /home/marcos/.config/fish/functions/theme-pure/conf.d/pure.fish
+set fish_function_path /home/marcker/.config/fish/functions/theme-pure/functions/ $fish_function_path
+source /home/marcker/.config/fish/functions/theme-pure/conf.d/pure.fish
