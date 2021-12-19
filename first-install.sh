@@ -67,6 +67,11 @@ tmux source ~/.tmux.conf;
 curl git.io/pure-fish --output /tmp/pure_installer.fish --location --silent;
 source /tmp/pure_installer.fish; and install_pure;
 
+git clone https://github.com/ryanoasis/nerd-fonts;
+cd nerd-fonts;
+sudo ./install.sh;
+
+
 # sudo cp -rv sources.list.d/* /etc/apt/sources.list.d;
 
 # sudo cp -rv fonts/opentype/* /usr/share/fonts/opentype;
