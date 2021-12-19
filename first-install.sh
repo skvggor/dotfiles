@@ -57,6 +57,8 @@ cp -rv .gitconfig ~/.gitconfig;
 
 cp -rv alacritty ~/.config/alacritty;
 
+cp -rv darktable/styles ~/.config/darktable;
+
 cp -rv pulse.conf ~/.config/pulse/daemon.conf;
 
 cp -rv .tmux.conf ~/.tmux.conf;
