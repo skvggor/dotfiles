@@ -11,8 +11,6 @@ ca-certificates \
 cheese \
 curl \
 darktable \
-filezilla \
-firefox-trunk \
 fish \
 flameshot \
 fonts-firacode \
@@ -29,7 +27,6 @@ inkscape \
 kdenlive \
 mono-devel \
 mplayer \
-pbcopy \
 rar \
 rhythmbox \
 screenruler \
@@ -47,8 +44,7 @@ xclip;
 # xscreensaver-data-extra \
 # xscreensaver-gl-extra;
 
-sudo snap install heroku terminology --classic;
-sudo snap htop;
+sudo snap install heroku terminology htop jq cmake --classic;
 
 # tools for linux
 cp -rv fish/config.fish ~/.config/fish/config.fish;
@@ -67,10 +63,10 @@ tmux source ~/.tmux.conf;
 curl git.io/pure-fish --output /tmp/pure_installer.fish --location --silent;
 source /tmp/pure_installer.fish; and install_pure;
 
-git clone https://github.com/ryanoasis/nerd-fonts;
-cd nerd-fonts;
-sudo ./install.sh;
+git clone https://github.com/ryanoasis/nerd-fonts ~/Downloads/nerd-fonts;
+sudo bash ~/Downloads/nerd-fonts/install.sh;
 
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm;
 
 # sudo cp -rv sources.list.d/* /etc/apt/sources.list.d;
 
