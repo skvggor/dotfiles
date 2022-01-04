@@ -24,6 +24,7 @@ gpick \
 imagemagick \
 imwheel \
 inkscape \
+jq \
 kdenlive \
 mono-devel \
 mplayer \
@@ -44,20 +45,24 @@ xclip;
 # xscreensaver-data-extra \
 # xscreensaver-gl-extra;
 
-sudo snap install heroku terminology htop jq cmake --classic;
+sudo snap install heroku terminology htop cmake --classic;
 
 # tools for linux
-cp -rv fish/config.fish ~/.config/fish/config.fish;
+cp -rv fish/config.fish ~/.config/fish/;
 
-cp -rv .gitconfig ~/.gitconfig;
+cp -rv .gitconfig ~/;
 
-cp -rv alacritty ~/.config/alacritty;
+cp -rv alacritty ~/.config/;
 
 cp -rv darktable/styles ~/.config/darktable;
 
 cp -rv pulse.conf ~/.config/pulse/daemon.conf;
 
-cp -rv .tmux.conf ~/.tmux.conf;
+cp -rv SimpleScreenRecorder/.ssr ~/;
+
+cp -rv lsd/config.yaml ~/.config/lsd/;
+
+cp -rv .tmux.conf ~/;
 tmux source ~/.tmux.conf;
 
 curl git.io/pure-fish --output /tmp/pure_installer.fish --location --silent;
@@ -72,8 +77,6 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm;
 
 # sudo cp -rv fonts/opentype/* /usr/share/fonts/opentype;
 # sudo cp -rv fonts/truetype/* /usr/share/fonts/truetype;
-
-sudo cp -rv SimpleScreenRecorder/.ssr/* ~/.ssr;
 
 curl https://rclone.org/install.sh | sudo bash;
 
