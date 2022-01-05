@@ -9,6 +9,7 @@ alacritty \
 audacity \
 ca-certificates \
 cheese \
+chrome-gnome-shell \
 curl \
 darktable \
 fish \
