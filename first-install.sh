@@ -4,15 +4,23 @@ mkdir ~/Google\ Drive;
 
 sudo add-apt-repository ppa:agornostal/ulauncher;
 
+# docker
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg;
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
+$(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null;
+
+# apt packages
 sudo apt update && sudo apt install \
 alacritty \
 audacity \
 ca-certificates \
 cheese \
+chrome-gnome-shell \
+containerd.io \
 curl \
 darktable \
-filezilla \
-firefox-trunk \
+docker-ce \
+docker-ce-cli \
 fish \
 flameshot \
 fonts-firacode \
@@ -26,10 +34,11 @@ gpick \
 imagemagick \
 imwheel \
 inkscape \
+jq \
 kdenlive \
+lsb-release \
 mono-devel \
 mplayer \
-pbcopy \
 rar \
 rhythmbox \
 screenruler \
@@ -47,32 +56,43 @@ xclip;
 # xscreensaver-data-extra \
 # xscreensaver-gl-extra;
 
-sudo snap install heroku terminology --classic;
-sudo snap htop;
+# docker-compose
+sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+
+# snap packages
+sudo snap install heroku terminology htop cmake --classic;
 
 # tools for linux
-cp -rv fish/config.fish ~/.config/fish/config.fish;
+cp -rv fish/config.fish ~/.config/fish/;
 
-cp -rv .gitconfig ~/.gitconfig;
+cp -rv .gitconfig ~/;
 
-cp -rv alacritty ~/.config/alacritty;
+cp -rv alacritty ~/.config/;
 
 cp -rv darktable/styles ~/.config/darktable;
 
 cp -rv pulse.conf ~/.config/pulse/daemon.conf;
 
-cp -rv .tmux.conf ~/.tmux.conf;
+cp -rv SimpleScreenRecorder/.ssr ~/;
+
+cp -rv lsd/config.yaml ~/.config/lsd/;
+
+cp -rv .tmux.conf ~/;
 tmux source ~/.tmux.conf;
 
 curl git.io/pure-fish --output /tmp/pure_installer.fish --location --silent;
 source /tmp/pure_installer.fish; and install_pure;
 
+git clone https://github.com/ryanoasis/nerd-fonts ~/Downloads/nerd-fonts;
+sudo bash ~/Downloads/nerd-fonts/install.sh;
+
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm;
+
 # sudo cp -rv sources.list.d/* /etc/apt/sources.list.d;
 
 # sudo cp -rv fonts/opentype/* /usr/share/fonts/opentype;
 # sudo cp -rv fonts/truetype/* /usr/share/fonts/truetype;
-
-sudo cp -rv SimpleScreenRecorder/.ssr/* ~/.ssr;
 
 curl https://rclone.org/install.sh | sudo bash;
 
@@ -88,8 +108,17 @@ gtop \
 localtunnel \
 n \
 npm-check-updates \
+qrcode-terminal \
 svgo \
 vercel;
+
+# docker, docker-compose
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg;
+
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
+$(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null;
+
+
 
 # microsoft edge
 {

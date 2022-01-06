@@ -1,12 +1,14 @@
 import:
         - /home/marcker/.config/alacritty/plugins/challenger-deep.yml
 font:
+        bold:
+                style: Regular
         normal:
-                family: 'Iosevka SS04'
-        size: 15.0
-        use_thin_strokes: false
+                family: 'ShureTechMono Nerd Font Mono'
+        size: 14.0
+        use_thin_strokes: true
 background_opacity: 0.9
-cursor: 
+cursor:
         style: Beam
 shell:
         program: /bin/bash
@@ -14,3 +16,5 @@ shell:
                 - -l
                 - -c
                 - "tmux attach || tmux"
+scrolling:
+        history: 50000
