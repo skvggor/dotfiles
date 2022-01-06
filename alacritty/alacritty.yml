@@ -2,14 +2,13 @@ import:
         - /home/marcker/.config/alacritty/plugins/challenger-deep.yml
 font:
         bold:
-                family: 'ShureTechMono Nerd Font Mono'
                 style: Regular
         normal:
                 family: 'ShureTechMono Nerd Font Mono'
         size: 14.0
         use_thin_strokes: true
 background_opacity: 0.9
-cursor: 
+cursor:
         style: Beam
 shell:
         program: /bin/bash
