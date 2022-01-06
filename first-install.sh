@@ -93,6 +93,7 @@ gtop \
 localtunnel \
 n \
 npm-check-updates \
+qrcode-terminal \
 svgo \
 vercel;
 
