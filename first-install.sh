@@ -2,8 +2,8 @@
 
 mkdir ~/Google\ Drive;
 
-sudo add-apt-repository ppa:agornostal/ulauncher;
-sudo add-apt-repository ppa:gezakovacs/ppa;
+# sudo add-apt-repository ppa:agornostal/ulauncher;
+# sudo add-apt-repository ppa:gezakovacs/ppa;
 
 # apt packages
 sudo apt update && sudo apt install -y \
@@ -16,12 +16,11 @@ containerd.io \
 curl \
 darktable \
 docker-ce \
-docker-ce-cli;
+docker-ce-cli \
 fish \
 flameshot \
 fonts-firacode \
 fonts-noto-color-emoji \
-gconf-editor \
 gimp \
 git \
 gnome-terminal \
@@ -40,14 +39,16 @@ rar \
 rhythmbox \
 screenruler \
 simplescreenrecorder \
+snapd \
 tmux \
 ttf-mscorefonts-installer \
-ulauncher \
-unetbootin \
 vim \
 vlc \
 xclip;
 
+# ulauncher \
+# unetbootin \
+# gconf-editor \
 # wine \
 # xscreensaver \
 # xscreensaver-data-extra \
@@ -68,6 +69,8 @@ sudo chmod +x /usr/local/bin/docker-compose
 sudo snap install heroku terminology htop cmake --classic;
 
 # tools for linux
+mkdir ~/.config/pulse ~/.config/lsd
+
 cp -rv fish/config.fish ~/.config/fish/;
 # cp -rv fish/fish_history ~/.local/share/fish/; // https://drive.google.com/file/d/1SviusRFELzNDuL9Ne6M5RcsU5j9_Pp79/view?usp=sharing
 
@@ -86,11 +89,10 @@ cp -rv lsd/config.yaml ~/.config/lsd/;
 cp -rv .tmux.conf ~/;
 tmux source ~/.tmux.conf;
 
+fish;
 curl git.io/pure-fish --output /tmp/pure_installer.fish --location --silent;
 source /tmp/pure_installer.fish; and install_pure;
-
-git clone https://github.com/ryanoasis/nerd-fonts ~/Downloads/nerd-fonts;
-sudo bash ~/Downloads/nerd-fonts/install.sh;
+bash;
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm;
 
@@ -160,14 +162,14 @@ vercel;
 }
 
 # Gens/GS
-{
-	sudo dpkg --add-architecture i386;
-	mkdir ~/temp && cd ~/temp && \
-	wget "https://retrocdn.net/images/e/e9/Gens_2.16.8-r7orig_amd64.deb" -O gen-gs.deb && sudo dpkg -i gens.deb && \
-	cd ../ && rm -rf ~/temp;
-} || {
-	sudo apt --fix-broken install && rm -rf ~/temp;
-}
+# {
+# 	sudo dpkg --add-architecture i386;
+# 	mkdir ~/temp && cd ~/temp && \
+# 	wget "https://retrocdn.net/images/e/e9/Gens_2.16.8-r7orig_amd64.deb" -O gen-gs.deb && sudo dpkg -i gens.deb && \
+# 	cd ../ && rm -rf ~/temp;
+# } || {
+# 	sudo apt --fix-broken install && rm -rf ~/temp;
+# }
 
 # vscode
 {
@@ -188,10 +190,10 @@ vercel;
 }
 
 # virtualbox
-{
-	mkdir ~/temp && cd ~/temp && \
-	wget "https://download.virtualbox.org/virtualbox/6.1.30/virtualbox-6.1_6.1.30-148432~Ubuntu~eoan_amd64.deb" -O vbox.deb && sudo dpkg -i vbox.deb && \
-	cd ../ && rm -rf ~/temp;
-} || {
-	sudo apt --fix-broken install && rm -rf ~/temp;
-}
+# {
+# 	mkdir ~/temp && cd ~/temp && \
+# 	wget "https://download.virtualbox.org/virtualbox/6.1.30/virtualbox-6.1_6.1.30-148432~Ubuntu~eoan_amd64.deb" -O vbox.deb && sudo dpkg -i vbox.deb && \
+# 	cd ../ && rm -rf ~/temp;
+# } || {
+# 	sudo apt --fix-broken install && rm -rf ~/temp;
+# }
