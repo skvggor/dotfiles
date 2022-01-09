@@ -40,6 +40,10 @@ function android-studio
 	/opt/android-studio/bin/./studio.sh
 end
 
+function netExtender
+	/usr/bin/netExtenderClient/./netExtender $argv
+end
+
 function sshadd
 	eval (ssh-agent -c)
 end

@@ -3,14 +3,10 @@
 mkdir ~/Google\ Drive;
 
 sudo add-apt-repository ppa:agornostal/ulauncher;
-
-# docker
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg;
-echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
-$(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null;
+sudo add-apt-repository ppa:gezakovacs/ppa;
 
 # apt packages
-sudo apt update && sudo apt install \
+sudo apt update && sudo apt install -y \
 alacritty \
 audacity \
 ca-certificates \
@@ -20,7 +16,7 @@ containerd.io \
 curl \
 darktable \
 docker-ce \
-docker-ce-cli \
+docker-ce-cli;
 fish \
 flameshot \
 fonts-firacode \
@@ -39,6 +35,7 @@ kdenlive \
 lsb-release \
 mono-devel \
 mplayer \
+python3-pip \
 rar \
 rhythmbox \
 screenruler \
@@ -46,15 +43,22 @@ simplescreenrecorder \
 tmux \
 ttf-mscorefonts-installer \
 ulauncher \
+unetbootin \
 vim \
 vlc \
 xclip;
 
 # wine \
-# unetbootin \
 # xscreensaver \
 # xscreensaver-data-extra \
 # xscreensaver-gl-extra;
+
+# docker
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg;
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
+$(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null;
+sudo chmod 666 /var/run/docker.sock
+# ---
 
 # docker-compose
 sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
@@ -65,6 +69,7 @@ sudo snap install heroku terminology htop cmake --classic;
 
 # tools for linux
 cp -rv fish/config.fish ~/.config/fish/;
+# cp -rv fish/fish_history ~/.local/share/fish/; // https://drive.google.com/file/d/1SviusRFELzNDuL9Ne6M5RcsU5j9_Pp79/view?usp=sharing
 
 cp -rv .gitconfig ~/;
 
@@ -90,7 +95,6 @@ sudo bash ~/Downloads/nerd-fonts/install.sh;
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm;
 
 # sudo cp -rv sources.list.d/* /etc/apt/sources.list.d;
-
 # sudo cp -rv fonts/opentype/* /usr/share/fonts/opentype;
 # sudo cp -rv fonts/truetype/* /usr/share/fonts/truetype;
 
@@ -112,13 +116,13 @@ qrcode-terminal \
 svgo \
 vercel;
 
-# docker, docker-compose
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg;
-
-echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
-$(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null;
-
-
+# nerd fonts
+{
+  mkdir ~/temp && cd ~/temp && \
+  git clone https://github.com/ryanoasis/nerd-fonts && \
+  sudo bash nerd-fonts/install.sh && \
+  cd ../ && rm -rf ~/temp;
+}
 
 # microsoft edge
 {
