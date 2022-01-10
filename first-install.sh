@@ -66,10 +66,13 @@ sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-
 sudo chmod +x /usr/local/bin/docker-compose
 
 # snap packages
-sudo snap install heroku terminology htop cmake --classic;
+sudo snap install heroku --classic;
+sudo snap install terminology --classic;
+sudo snap install htop --classic;
+sudo snap install cmake --classic;
 
 # tools for linux
-mkdir ~/.config/pulse ~/.config/lsd
+# mkdir ~/.config/pulse ~/.config/lsd
 
 cp -rv fish/config.fish ~/.config/fish/;
 # cp -rv fish/fish_history ~/.local/share/fish/; // https://drive.google.com/file/d/1SviusRFELzNDuL9Ne6M5RcsU5j9_Pp79/view?usp=sharing
@@ -89,10 +92,10 @@ cp -rv lsd/config.yaml ~/.config/lsd/;
 cp -rv .tmux.conf ~/;
 tmux source ~/.tmux.conf;
 
-fish;
+chsh -s /usr/bin/fish;
+
 curl git.io/pure-fish --output /tmp/pure_installer.fish --location --silent;
-source /tmp/pure_installer.fish; and install_pure;
-bash;
+# source /tmp/pure_installer.fish; and install_pure;
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm;
 
@@ -122,7 +125,7 @@ vercel;
 {
   mkdir ~/temp && cd ~/temp && \
   git clone https://github.com/ryanoasis/nerd-fonts && \
-  sudo bash nerd-fonts/install.sh && \
+	bash nerd-fonts/install.sh && \
   cd ../ && rm -rf ~/temp;
 }
 
