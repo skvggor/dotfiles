@@ -1,14 +1,14 @@
 # !/bin/sh
 
 mkdir ~/Google\ Drive;
-mkdir -p ~/Projects/{me, match};
+mkdir -p ~/Projects/me;
+mkdir -p ~/Projects/match;
 
 sudo add-apt-repository ppa:agornostal/ulauncher;
 sudo add-apt-repository ppa:gezakovacs/ppa;
 
 # apt packages
 sudo apt update -y && sudo apt install -y \
-alacritty \
 audacity \
 ca-certificates \
 cheese \
@@ -36,6 +36,7 @@ lsb-release \
 mono-devel \
 mplayer \
 mysql-workbench \
+net-tools \
 python3-pip \
 rar \
 rhythmbox \
@@ -74,7 +75,7 @@ sudo chmod +x /usr/local/bin/docker-compose
 
 # snap packages
 sudo snap install heroku --classic;
-# sudo snap install terminology --classic;
+sudo snap install alacritty --classic;
 sudo snap install htop --classic;
 sudo snap install cmake --classic;
 
