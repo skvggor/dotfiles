@@ -42,6 +42,7 @@ rhythmbox \
 screenruler \
 simplescreenrecorder \
 snapd \
+solaar \
 tmux \
 ttf-mscorefonts-installer \
 ulauncher \
