@@ -1,19 +1,13 @@
 # !/bin/sh
 
 mkdir ~/Google\ Drive;
+mkdir -p ~/Projects/{me, match};
 
-# sudo add-apt-repository ppa:agornostal/ulauncher;
-# sudo add-apt-repository ppa:gezakovacs/ppa;
-
-# docker
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg;
-echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
-$(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null;
-sudo chmod 666 /var/run/docker.sock
-# ---
+sudo add-apt-repository ppa:agornostal/ulauncher;
+sudo add-apt-repository ppa:gezakovacs/ppa;
 
 # apt packages
-sudo apt update && sudo apt install -y \
+sudo apt update -y && sudo apt install -y \
 alacritty \
 audacity \
 ca-certificates \
@@ -41,6 +35,7 @@ kdenlive \
 lsb-release \
 mono-devel \
 mplayer \
+mysql-workbench \
 python3-pip \
 rar \
 rhythmbox \
@@ -49,17 +44,28 @@ simplescreenrecorder \
 snapd \
 tmux \
 ttf-mscorefonts-installer \
+ulauncher \
+unetbootin \
 vim \
 vlc \
 xclip;
 
-# ulauncher \
-# unetbootin \
 # gconf-editor \
 # wine \
 # xscreensaver \
 # xscreensaver-data-extra \
 # xscreensaver-gl-extra;
+
+
+# docker
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg;
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
+$(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null;
+sudo chmod 666 /var/run/docker.sock;
+sudo groupadd docker;
+sudo usermod -aG docker $USER;
+# newgrp docker
+# ---
 
 # docker-compose
 sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
@@ -67,12 +73,12 @@ sudo chmod +x /usr/local/bin/docker-compose
 
 # snap packages
 sudo snap install heroku --classic;
-sudo snap install terminology --classic;
+# sudo snap install terminology --classic;
 sudo snap install htop --classic;
 sudo snap install cmake --classic;
 
 # tools for linux
-# mkdir ~/.config/pulse ~/.config/lsd
+mkdir ~/.config/pulse ~/.config/lsd
 
 cp -rv fish/config.fish ~/.config/fish/;
 # cp -rv fish/fish_history ~/.local/share/fish/; // https://drive.google.com/file/d/1SviusRFELzNDuL9Ne6M5RcsU5j9_Pp79/view?usp=sharing
