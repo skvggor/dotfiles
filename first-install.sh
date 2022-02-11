@@ -4,6 +4,14 @@ mkdir ~/Google\ Drive;
 mkdir -p ~/Projects/me;
 mkdir -p ~/Projects/match;
 
+sudo apt update -y && sudo apt install curl;
+
+# docker
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg;
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
+$(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null;
+# ---
+
 sudo add-apt-repository ppa:agornostal/ulauncher;
 sudo add-apt-repository ppa:gezakovacs/ppa;
 
@@ -35,7 +43,6 @@ kdenlive \
 lsb-release \
 mono-devel \
 mplayer \
-mysql-workbench \
 net-tools \
 python3-pip \
 rar \
@@ -52,17 +59,14 @@ vim \
 vlc \
 xclip;
 
+# mysql-workbench \
 # gconf-editor \
 # wine \
 # xscreensaver \
 # xscreensaver-data-extra \
 # xscreensaver-gl-extra;
 
-
 # docker
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg;
-echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
-$(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null;
 sudo chmod 666 /var/run/docker.sock;
 sudo groupadd docker;
 sudo usermod -aG docker $USER;
