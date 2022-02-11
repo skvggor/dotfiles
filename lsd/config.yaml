@@ -13,7 +13,6 @@ date: date
 dereference: false
 icons:
   when: auto
-  theme: unicode
   separator: "  "
 indicators: false
 layout: grid
