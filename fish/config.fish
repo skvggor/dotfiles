@@ -60,6 +60,6 @@ function ls
 	lsd $argv
 end
 
-# THEME PURE #
-set fish_function_path /home/marcker/.config/fish/functions/theme-pure/functions/ $fish_function_path
-#source /home/marcker/.config/fish/functions/theme-pure/conf.d/pure.fish
+starship init fish | source
+
+neofetch
