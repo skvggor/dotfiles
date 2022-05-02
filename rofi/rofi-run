@@ -1,5 +1,5 @@
 #!/bin/bash
 
 # export LC_ALL="C"
-/usr/local/bin/./rofi -show run 2>&1 | tee /tmp/rofi-run.log
+/usr/local/bin/./rofi -show drun 2>&1 | tee /tmp/rofi-run.log
 # exit 0
