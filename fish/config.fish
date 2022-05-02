@@ -60,6 +60,10 @@ function ls
 	lsd $argv
 end
 
+function firefox-nightly
+	/usr/bin/firefox-nightly/./firefox
+end
+
 starship init fish | source
 
-neofetch
+pfetch
