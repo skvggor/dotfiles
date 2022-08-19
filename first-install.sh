@@ -1,10 +1,20 @@
 # !/bin/sh
 
-mkdir ~/Google\ Drive;
-mkdir -p ~/Projects/me;
-mkdir -p ~/Projects/match;
+# :( i know about -p
 
-sudo apt update -y && sudo apt install curl;
+mkdir ~/.config;
+mkdir ~/.config/pulse;
+mkdir ~/.config/lsd;
+mkdir ~/.config/fish;
+mkdir ~/.config/darktable;
+
+mkdir ~/Google\ Drive;
+
+mkdir ~/Projects;
+mkdir ~/Projects/me;
+mkdir ~/Projects/viptelecom;
+
+sudo apt update -y && sudo apt install curl fish git tmux;
 
 # docker
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg;
@@ -13,26 +23,28 @@ $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev
 # ---
 
 sudo add-apt-repository ppa:agornostal/ulauncher;
-sudo add-apt-repository ppa:gezakovacs/ppa;
+sudo add-apt-repository ppa:gezakovacs/ppa; # unetbootin
 
 # apt packages
 sudo apt update -y && sudo apt install -y \
+apt-transport-https \
 audacity \
+ca-certificates \
 ca-certificates \
 cheese \
 chrome-gnome-shell \
+cmatrix \
 containerd.io \
-curl \
 darktable \
 docker-ce \
 docker-ce-cli \
-fish \
 flameshot \
 fonts-firacode \
 fonts-noto-color-emoji \
+gconf-editor \
 gimp \
-git \
 gnome-terminal \
+gnome-tweaks \
 gnupg \
 gpick \
 imagemagick \
@@ -40,10 +52,17 @@ imwheel \
 inkscape \
 jq \
 kdenlive \
+libreswan \
 lsb-release \
 mono-devel \
 mplayer \
+mysql-workbench \
 net-tools \
+git-extras \
+golang \
+ubuntu-restricted-extras \
+network-manager-l2tp \
+network-manager-l2tp-gnome \
 python3-pip \
 rar \
 rhythmbox \
@@ -59,8 +78,6 @@ vim \
 vlc \
 xclip;
 
-# mysql-workbench \
-# gconf-editor \
 # wine \
 # xscreensaver \
 # xscreensaver-data-extra \
@@ -74,8 +91,8 @@ sudo usermod -aG docker $USER;
 # ---
 
 # docker-compose
-sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-sudo chmod +x /usr/local/bin/docker-compose
+sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose;
+sudo chmod +x /usr/local/bin/docker-compose;
 
 # snap packages
 sudo snap install heroku --classic;
@@ -83,22 +100,14 @@ sudo snap install alacritty --classic;
 sudo snap install htop --classic;
 sudo snap install cmake --classic;
 
-# tools for linux
-mkdir ~/.config/pulse ~/.config/lsd
-
-cp -rv fish/config.fish ~/.config/fish/;
 # cp -rv fish/fish_history ~/.local/share/fish/; // https://drive.google.com/file/d/1SviusRFELzNDuL9Ne6M5RcsU5j9_Pp79/view?usp=sharing
 
+cp -rv fish/config.fish ~/.config/fish/;
 cp -rv .gitconfig ~/;
-
 cp -rv alacritty ~/.config/;
-
-cp -rv darktable/styles ~/.config/darktable;
-
+cp -rv darktable/styles/* ~/.config/darktable/styles/;
 cp -rv pulse.conf ~/.config/pulse/daemon.conf;
-
 cp -rv SimpleScreenRecorder/.ssr ~/;
-
 cp -rv lsd/config.yaml ~/.config/lsd/;
 
 cp -rv .tmux.conf ~/;
@@ -107,13 +116,9 @@ tmux source ~/.tmux.conf;
 chsh -s /usr/bin/fish;
 
 curl git.io/pure-fish --output /tmp/pure_installer.fish --location --silent;
-# source /tmp/pure_installer.fish; and install_pure;
+source /tmp/pure_installer.fish; and install_pure;
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm;
-
-# sudo cp -rv sources.list.d/* /etc/apt/sources.list.d;
-# sudo cp -rv fonts/opentype/* /usr/share/fonts/opentype;
-# sudo cp -rv fonts/truetype/* /usr/share/fonts/truetype;
 
 curl https://rclone.org/install.sh | sudo bash;
 
@@ -177,23 +182,23 @@ vercel;
 }
 
 # Gens/GS
-# {
-# 	sudo dpkg --add-architecture i386;
-# 	mkdir ~/temp && cd ~/temp && \
-# 	wget "https://retrocdn.net/images/e/e9/Gens_2.16.8-r7orig_amd64.deb" -O gen-gs.deb && sudo dpkg -i gens.deb && \
-# 	cd ../ && rm -rf ~/temp;
-# } || {
-# 	sudo apt --fix-broken install && rm -rf ~/temp;
-# }
-
-# vscode
 {
+	sudo dpkg --add-architecture i386;
 	mkdir ~/temp && cd ~/temp && \
-	wget "https://code.visualstudio.com/sha/download?build=insider&os=linux-deb-x64" -O code.deb && sudo dpkg -i code.deb && \
+	wget "https://retrocdn.net/images/e/e9/Gens_2.16.8-r7orig_amd64.deb" -O gen-gs.deb && sudo dpkg -i gens.deb && \
 	cd ../ && rm -rf ~/temp;
 } || {
 	sudo apt --fix-broken install && rm -rf ~/temp;
 }
+
+ # vscode
+ {
+ 	mkdir ~/temp && cd ~/temp && \
+ 	wget "https://code.visualstudio.com/sha/download?build=insider&os=linux-deb-x64" -O code.deb && sudo dpkg -i code.deb && \
+ 	cd ../ && rm -rf ~/temp;
+ } || {
+ 	sudo apt --fix-broken install && rm -rf ~/temp;
+ }
 
 # google chrome
 {
@@ -205,10 +210,10 @@ vercel;
 }
 
 # virtualbox
-# {
-# 	mkdir ~/temp && cd ~/temp && \
-# 	wget "https://download.virtualbox.org/virtualbox/6.1.30/virtualbox-6.1_6.1.30-148432~Ubuntu~eoan_amd64.deb" -O vbox.deb && sudo dpkg -i vbox.deb && \
-# 	cd ../ && rm -rf ~/temp;
-# } || {
-# 	sudo apt --fix-broken install && rm -rf ~/temp;
-# }
+{
+	mkdir ~/temp && cd ~/temp && \
+	wget "https://download.virtualbox.org/virtualbox/6.1.34/virtualbox-6.1_6.1.34-150636.1~Ubuntu~eoan_amd64.deb" -O vbox.deb && sudo dpkg -i vbox.deb && \
+	cd ../ && rm -rf ~/temp;
+} || {
+	sudo apt --fix-broken install && rm -rf ~/temp;
+}

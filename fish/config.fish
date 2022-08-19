@@ -1,13 +1,5 @@
 set fish_greeting ""
 
-function yrb
-	yarn run build
-end
-
-function yrbs
-	yrb; and yarn start
-end
-
 function camera
 	mplayer tv:// -tv driver=v4l2:width=640:height=480 -vo xv
 end
@@ -17,19 +9,23 @@ function o
 end
 
 function .
-	thunar $argv
+	nautilus $argv
 end
 
 function ns
 	npm start
 end
 
-function dev
-	npm run dev
+function ydev
+	yarn dev
 end
 
-function nrb
-	npm run build
+function ygen
+	yarn generate
+end
+
+function dev
+	npm run dev
 end
 
 function postman
@@ -40,16 +36,8 @@ function android-studio
 	/opt/android-studio/bin/./studio.sh
 end
 
-function netExtender
-	/usr/bin/netExtenderClient/./netExtender $argv
-end
-
 function sshadd
 	eval (ssh-agent -c)
-end
-
-function dockercptheme
-	docker cp /home/marcker/Projects/fbiz/honda-hsf/docroot/themes/custom/blog 8783f644c1be:/var/www/html/web/core/themes
 end
 
 function code
@@ -64,6 +52,11 @@ function firefox-nightly
 	/usr/bin/firefox-nightly/./firefox
 end
 
+function scr
+	cmatrix -s -b -r
+end
+
 starship init fish | source
 
 pfetch
+scr

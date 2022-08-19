@@ -4,11 +4,12 @@ font:
         bold:
                 style: Regular
         normal:
-                family: 'JetBrainsMono Nerd Font'
+                family: 'Iosevka Term'
         size: 14.0
         use_thin_strokes: true
 window:
         opacity: 0.95
+        # startup_mode: Fullscreen
 cursor:
         style: Beam
 shell:
