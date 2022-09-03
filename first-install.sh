@@ -59,6 +59,7 @@ golang \
 ubuntu-restricted-extras \
 network-manager-l2tp \
 network-manager-l2tp-gnome \
+pavucontrol \
 python3-pip \
 rar \
 rhythmbox \
