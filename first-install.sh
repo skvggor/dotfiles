@@ -35,14 +35,17 @@ containerd.io \
 darktable \
 docker-ce \
 docker-ce-cli \
+filezilla \
 flameshot \
 fonts-firacode \
 fonts-noto-color-emoji \
 gconf-editor \
 gimp \
+git-extras \
 gnome-terminal \
 gnome-tweaks \
 gnupg \
+golang \
 gpick \
 imagemagick \
 imwheel \
@@ -53,15 +56,15 @@ libreswan \
 lsb-release \
 mono-devel \
 mplayer \
+neovim \
 net-tools \
-git-extras \
-golang \
-ubuntu-restricted-extras \
 network-manager-l2tp \
 network-manager-l2tp-gnome \
+optipng \
 pavucontrol \
 python3-pip \
 rar \
+rename \
 rhythmbox \
 screenruler \
 simplescreenrecorder \
@@ -69,10 +72,13 @@ snapd \
 solaar \
 tmux \
 ttf-mscorefonts-installer \
+ubuntu-restricted-extras \
 ulauncher \
 vim \
 vlc \
 xclip;
+
+# rename package use: rename 's/\.txt$/.md/' *.txt
 
 # mysql-workbench \
 # unetbootin \
@@ -99,6 +105,7 @@ sudo snap install htop --classic;
 sudo snap install cmake --classic;
 sudo snap install figma-linux;
 sudo snap install starship;
+sudo snap install espanso --classic --channel=latest/edge;
 
 # cp -rv fish/fish_history ~/.local/share/fish/; // https://drive.google.com/file/d/1SviusRFELzNDuL9Ne6M5RcsU5j9_Pp79/view?usp=sharing
 
@@ -146,8 +153,6 @@ vercel;
   sudo cp -v pfetch /usr/bin && \
   cd ~ && rm -rf ~/temp;
 }
-
-
 
 # nerd fonts
 {
