@@ -1,0 +1,22 @@
+import:
+        - /home/skvggor/.config/alacritty/plugins/nord.yml
+font:
+        bold:
+                style: Regular
+        normal:
+                family: 'Iosevka Term'
+        size: 14.0
+        use_thin_strokes: true
+window:
+        opacity: 0.95
+        # startup_mode: Fullscreen
+cursor:
+        style: Beam
+shell:
+        program: /bin/bash
+        args:
+                - -l
+                - -c
+                - "tmux attach || tmux"
+scrolling:
+        history: 50000
