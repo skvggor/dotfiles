@@ -1,15 +1,7 @@
 set fish_greeting ""
 
 function camera
-	mplayer tv:// -tv driver=v4l2:width=640:height=480 -vo xv
-end
-
-function o
-	open $argv
-end
-
-function .
-	nautilus $argv
+	mplayer tv:// -tv driver=v4l2:width=1024:height=768 -vo xv
 end
 
 function ns
@@ -58,5 +50,4 @@ end
 
 starship init fish | source
 
-pfetch
-scr
+pfetch; and scr
