@@ -1,16 +1,8 @@
 # !/bin/sh
 
-# :( i know about -p
-
-mkdir ~/.config/pulse;
-mkdir ~/.config/lsd;
-mkdir ~/.config/fish;
-mkdir ~/.config/darktable;
-
+mkdir -v ~/.config/{pulse,lsd,fish,darktable}
 mkdir ~/Google\ Drive;
-
-mkdir ~/Projects;
-mkdir ~/Projects/me;
+mkdir -p ~/Projects/me;
 
 sudo apt update -y && sudo apt install curl fish git tmux;
 
@@ -70,7 +62,6 @@ screenruler \
 simplescreenrecorder \
 snapd \
 solaar \
-tmux \
 ttf-mscorefonts-installer \
 ubuntu-restricted-extras \
 ulauncher \
