@@ -15,7 +15,7 @@ sudo pacman -Syu;
 # libreswan
 # ttf-mscorefonts-installer
 
-sudo pacman -S curl \
+sudo pacman -S --noconfirm curl \
 cheese \
 cmake \
 cmatrix \
@@ -24,7 +24,8 @@ filezilla \
 fish \
 flameshot \
 git \
-golang \
+go \
+konsole \
 gpick \
 htop \
 inkscape \
