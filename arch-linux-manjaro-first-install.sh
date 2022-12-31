@@ -20,17 +20,19 @@ cheese \
 cmake \
 cmatrix \
 darktable \
+docker \
+docker-compose \
 filezilla \
 fish \
 flameshot \
 git \
 go \
-konsole \
 gpick \
 htop \
 inkscape \
 jq \
 kdenlive \
+konsole \
 lsd \
 mplayer \
 net-tools \
@@ -47,12 +49,12 @@ vlc \
 xclip \
 yarn;
 
-yay -S ulauncher \
-espanso \
-figma-linux \
-google-chrome \
-heroku \
-starship;
+yay -S --noconfirm ulauncher;
+yay -S --noconfirm espanso;
+yay -S --noconfirm figma-linux;
+yay -S --noconfirm google-chrome;
+yay -S --noconfirm heroku;
+yay -S --noconfirm starship;
 
 cp -rv fish/config.fish ~/.config/fish/;
 cp -rv .gitconfig ~/;
@@ -61,6 +63,15 @@ cp -rv darktable/styles ~/.config/darktable/styles/;
 cp -rv pulse.conf ~/.config/pulse/daemon.conf;
 cp -rv SimpleScreenRecorder/.ssr ~/;
 cp -rv lsd/config.yaml ~/.config/lsd/;
+
+# docker
+sudo systemctl start docker.service;
+sudo systemctl enable docker.service;
+sudo chmod 666 /var/run/docker.sock;
+sudo groupadd docker;
+sudo usermod -aG docker $USER;
+newgrp docker;
+# ---
 
 # tmux conf
 cp -rv .tmux.conf ~/;
