@@ -50,6 +50,7 @@ xclip \
 yarn;
 
 yay -S --noconfirm ulauncher;
+yay -S --noconfirm hyper;
 yay -S --noconfirm espanso;
 yay -S --noconfirm figma-linux;
 yay -S --noconfirm google-chrome;
