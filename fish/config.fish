@@ -40,6 +40,14 @@ function ls
 	lsd $argv
 end
 
+function cat
+	bat --theme=Dracula $argv
+end
+
+function catn
+	cat --style="changes" $argv
+end
+
 function firefox-nightly
 	/usr/bin/firefox-nightly/./firefox
 end
