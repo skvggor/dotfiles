@@ -16,6 +16,7 @@ sudo pacman -Syu;
 # ttf-mscorefonts-installer
 
 sudo pacman -S --noconfirm curl \
+bat \
 cheese \
 cmake \
 cmatrix \
@@ -26,6 +27,7 @@ filezilla \
 fish \
 flameshot \
 git \
+gnome-font-viewer \
 go \
 gpick \
 htop \
