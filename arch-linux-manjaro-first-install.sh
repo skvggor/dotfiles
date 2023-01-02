@@ -21,6 +21,7 @@ cheese \
 cmake \
 cmatrix \
 darktable \
+deno \
 docker \
 docker-compose \
 filezilla \
