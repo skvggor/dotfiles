@@ -27,6 +27,7 @@ docker-compose \
 filezilla \
 fish \
 flameshot \
+geary \
 git \
 gnome-font-viewer \
 go \
