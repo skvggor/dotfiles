@@ -60,6 +60,7 @@ yay -S --noconfirm figma-linux;
 yay -S --noconfirm google-chrome;
 yay -S --noconfirm heroku;
 yay -S --noconfirm starship;
+yay -S --noconfirm visual-studio-code-insiders-bin;
 
 cp -rv fish/config.fish ~/.config/fish/;
 cp -rv .gitconfig ~/;
