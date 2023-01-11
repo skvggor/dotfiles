@@ -50,10 +50,12 @@ python-pip \
 rhythmbox \
 simplescreenrecorder \
 solaar \
+speedtest-cli \
 tmux \
 vim \
 vlc \
 xclip \
+xsel \
 yarn;
 
 yay -S --noconfirm ulauncher;
