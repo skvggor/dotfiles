@@ -16,6 +16,7 @@ sudo pacman -Syu;
 # ttf-mscorefonts-installer
 
 sudo pacman -S --noconfirm curl \
+alacritty \
 bat \
 cheese \
 cmake \

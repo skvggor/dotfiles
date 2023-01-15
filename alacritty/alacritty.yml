@@ -1,12 +1,13 @@
 import:
-        - /home/skvggor/.config/alacritty/plugins/nord.yml
+        - /home/skvggor/.config/alacritty/plugins/dracula-pro-van-helsing.yml
 font:
-        bold:
-                style: Regular
         normal:
-                family: 'Iosevka Term'
-        size: 14.0
-        use_thin_strokes: true
+                family: 'Iosevka Nerd Font'
+                style: Bold
+        bold:
+                family: 'Iosevka Nerd Font'
+                style: Bold
+        size: 15.0
 window:
         opacity: 0.95
         # startup_mode: Fullscreen
