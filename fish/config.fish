@@ -58,4 +58,4 @@ end
 
 starship init fish | source
 
-pfetch; and scr
+nitch; and scr

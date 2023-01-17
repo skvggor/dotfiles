@@ -59,13 +59,14 @@ xclip \
 xsel \
 yarn;
 
-yay -S --noconfirm ulauncher;
-yay -S --noconfirm hyper;
 yay -S --noconfirm espanso;
 yay -S --noconfirm figma-linux;
 yay -S --noconfirm google-chrome;
 yay -S --noconfirm heroku;
+yay -S --noconfirm hyper;
+yay -S --noconfirm nitch;
 yay -S --noconfirm starship;
+yay -S --noconfirm ulauncher;
 yay -S --noconfirm visual-studio-code-insiders-bin;
 
 cp -rv fish/config.fish ~/.config/fish/;
