@@ -121,7 +121,7 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm;
 # curl https://rclone.org/install.sh | sudo bash;
 
 # nodejs
-curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash - && sudo apt install -y nodejs && \
+curl -sL https://deb.nodesource.com/setup_19.x | sudo -E bash - && sudo apt install -y nodejs && \
 echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
 
 # global npm packages
