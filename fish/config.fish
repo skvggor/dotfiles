@@ -16,6 +16,10 @@ function ygen
 	yarn generate
 end
 
+function dev
+	npm run dev
+end
+
 function postman
 	/bin/Postman/./Postman
 end
@@ -37,7 +41,7 @@ function ls
 end
 
 function cat
-	bat $argv
+	bat --theme=Dracula $argv
 end
 
 function catn
@@ -71,4 +75,6 @@ abbr -a gh\? github-copilot-cli gh-assist
 starship init fish | source
 atuin init fish | source
 
-scr
+starship init fish | source
+
+nitch; and scr
