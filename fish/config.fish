@@ -16,10 +16,6 @@ function ygen
 	yarn generate
 end
 
-function dev
-	npm run dev
-end
-
 function postman
 	/bin/Postman/./Postman
 end
@@ -41,7 +37,7 @@ function ls
 end
 
 function cat
-	bat --theme=Dracula $argv
+	bat $argv
 end
 
 function catn
@@ -53,9 +49,26 @@ function firefox-nightly
 end
 
 function scr
-	cmatrix -s -b -r
+	cmatrix -s -b
 end
 
-starship init fish | source
+function how
+	github-copilot-cli what-the-shell $argv
+end
 
-nitch; and scr
+function ga
+	github-copilot-cli git-assist $argv
+end
+
+function gha
+	github-copilot-cli gh-assist $argv
+end
+
+abbr -a \?\? github-copilot-cli what-the-shell
+abbr -a git\? github-copilot-cli git-assist
+abbr -a gh\? github-copilot-cli gh-assist
+
+starship init fish | source
+atuin init fish | source
+
+scr
