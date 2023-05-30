@@ -3,10 +3,11 @@
 	br = branch
 	ci = commit
 	st = status
+	cp = cherry-pick
 [user]
 	name = Marcos Garcia de Lima
 	email = marckfree@gmail.com
 [push]
 	default = simple
 [core]
-	editor = nano
+	editor = micro
