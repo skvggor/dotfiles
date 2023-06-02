@@ -53,9 +53,25 @@ function firefox-nightly
 end
 
 function scr
-	cmatrix -s -b -r
+	cmatrix -s -b
 end
 
-starship init fish | source
+function how
+	github-copilot-cli what-the-shell $argv
+end
 
+function ga
+	github-copilot-cli git-assist $argv
+end
+
+function gha
+	github-copilot-cli gh-assist $argv
+end
+
+abbr -a \?\? github-copilot-cli what-the-shell
+abbr -a git\? github-copilot-cli git-assist
+abbr -a gh\? github-copilot-cli gh-assist
+
+atuin init fish | source
+starship init fish | source
 nitch; and scr

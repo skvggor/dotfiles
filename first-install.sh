@@ -1,5 +1,8 @@
 # !/bin/sh
 
+# zellij
+bash <(curl https://raw.githubusercontent.com/ellie/atuin/main/install.sh);
+
 mkdir -v ~/.config/{pulse,lsd,fish,darktable}
 mkdir ~/Google\ Drive;
 mkdir -p ~/Projects/me;
@@ -90,13 +93,13 @@ sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-
 sudo chmod +x /usr/local/bin/docker-compose;
 
 # snap packages
-sudo snap install heroku --classic;
 sudo snap install alacritty --classic;
 sudo snap install htop --classic;
 sudo snap install cmake --classic;
 sudo snap install figma-linux;
 sudo snap install starship;
-sudo snap install espanso --classic --channel=latest/edge;
+sudo snap install espanso --classic --channel=latest/edge
+sudo snap install multipass;
 
 # cp -rv fish/fish_history ~/.local/share/fish/; // https://drive.google.com/file/d/1SviusRFELzNDuL9Ne6M5RcsU5j9_Pp79/view?usp=sharing
 
@@ -108,8 +111,8 @@ cp -rv pulse.conf ~/.config/pulse/daemon.conf;
 cp -rv SimpleScreenRecorder/.ssr ~/;
 cp -rv lsd/config.yaml ~/.config/lsd/;
 
-cp -rv .tmux.conf ~/;
-tmux source ~/.tmux.conf;
+# cp -rv .tmux.conf ~/;
+# tmux source ~/.tmux.conf;
 
 chsh -s /usr/bin/fish;
 
@@ -126,6 +129,7 @@ echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo s
 
 # global npm packages
 sudo npm i -g -d \
+@githubnext/github-copilot-cli \
 begynner \
 easy-rename \
 gtop \
@@ -137,13 +141,13 @@ svgo \
 vercel;
 
 # pfetch
-{
-  mkdir ~/temp && cd ~/temp && \
-  git clone https://github.com/dylanaraps/pfetch && \
-  cd pfetch && \
-  sudo cp -v pfetch /usr/bin && \
-  cd ~ && rm -rf ~/temp;
-}
+# {
+#   mkdir ~/temp && cd ~/temp && \
+#   git clone https://github.com/dylanaraps/pfetch && \
+#   cd pfetch && \
+#   sudo cp -v pfetch /usr/bin && \
+#   cd ~ && rm -rf ~/temp;
+# }
 
 # nerd fonts
 {
@@ -189,14 +193,14 @@ vercel;
 }
 
 # Gens/GS
-{
-  sudo dpkg --add-architecture i386;
-  mkdir ~/temp && cd ~/temp && \
-  wget "https://retrocdn.net/images/e/e9/Gens_2.16.8-r7orig_amd64.deb" -O gen-gs.deb && sudo dpkg -i gens.deb && \
-  cd ~ && rm -rf ~/temp;
-} || {
-  sudo apt --fix-broken install && rm -rf ~/temp;
-}
+# {
+#   sudo dpkg --add-architecture i386;
+#   mkdir ~/temp && cd ~/temp && \
+#   wget "https://retrocdn.net/images/e/e9/Gens_2.16.8-r7orig_amd64.deb" -O gen-gs.deb && sudo dpkg -i gens.deb && \
+#   cd ~ && rm -rf ~/temp;
+# } || {
+#   sudo apt --fix-broken install && rm -rf ~/temp;
+# }
 
 # vscode
 {
