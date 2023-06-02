@@ -94,12 +94,13 @@ sudo chmod +x /usr/local/bin/docker-compose;
 
 # snap packages
 sudo snap install alacritty --classic;
-sudo snap install htop --classic;
 sudo snap install cmake --classic;
+sudo snap install espanso --classic --channel=latest/edge;
 sudo snap install figma-linux;
-sudo snap install starship;
-sudo snap install espanso --classic --channel=latest/edge
+sudo snap install htop --classic;
+sudo snap install micro --classic;
 sudo snap install multipass;
+sudo snap install starship;
 
 # cp -rv fish/fish_history ~/.local/share/fish/; // https://drive.google.com/file/d/1SviusRFELzNDuL9Ne6M5RcsU5j9_Pp79/view?usp=sharing
 
