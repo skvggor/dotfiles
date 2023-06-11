@@ -15,6 +15,10 @@ curl https://sh.rustup.rs -sSf | sh;
 # zellij
 cargo install --locked zellij;
 
+# starship
+curl -sS https://starship.rs/install.sh | sh
+
+
 # docker
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg;
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
