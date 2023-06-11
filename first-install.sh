@@ -1,6 +1,6 @@
 # !/bin/sh
 
-# zellij
+# atuin
 bash <(curl https://raw.githubusercontent.com/ellie/atuin/main/install.sh);
 
 mkdir -v ~/.config/{pulse,lsd,fish,darktable}
