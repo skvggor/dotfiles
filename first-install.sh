@@ -9,6 +9,12 @@ mkdir -p ~/Projects/me;
 
 sudo apt update -y && sudo apt install curl fish git tmux;
 
+# rust
+curl https://sh.rustup.rs -sSf | sh;
+
+# zellij
+cargo install --locked zellij;
+
 # docker
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg;
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \

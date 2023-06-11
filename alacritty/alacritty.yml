@@ -18,6 +18,6 @@ shell:
         args:
                 - -l
                 - -c
-                - "tmux attach || tmux"
+                - "zellij attach || zellij"
 scrolling:
         history: 50000
