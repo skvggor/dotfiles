@@ -1,18 +1,23 @@
 # !/bin/sh
 
-# :( i know about -p
+# atuin
+bash <(curl https://raw.githubusercontent.com/ellie/atuin/main/install.sh);
 
-mkdir ~/.config/pulse;
-mkdir ~/.config/lsd;
-mkdir ~/.config/fish;
-mkdir ~/.config/darktable;
-
+mkdir -v ~/.config/{pulse,lsd,fish,darktable}
 mkdir ~/Google\ Drive;
-
-mkdir ~/Projects;
-mkdir ~/Projects/me;
+mkdir -p ~/Projects/me;
 
 sudo apt update -y && sudo apt install curl fish git tmux;
+
+# rust
+curl https://sh.rustup.rs -sSf | sh;
+
+# zellij
+cargo install --locked zellij;
+
+# starship
+curl -sS https://starship.rs/install.sh | sh
+
 
 # docker
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg;
@@ -70,7 +75,6 @@ screenruler \
 simplescreenrecorder \
 snapd \
 solaar \
-tmux \
 ttf-mscorefonts-installer \
 ubuntu-restricted-extras \
 ulauncher \
@@ -99,13 +103,14 @@ sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-
 sudo chmod +x /usr/local/bin/docker-compose;
 
 # snap packages
-sudo snap install heroku --classic;
 sudo snap install alacritty --classic;
-sudo snap install htop --classic;
 sudo snap install cmake --classic;
-sudo snap install figma-linux;
-sudo snap install starship;
 sudo snap install espanso --classic --channel=latest/edge;
+sudo snap install figma-linux;
+sudo snap install htop --classic;
+sudo snap install micro --classic;
+sudo snap install multipass;
+sudo snap install starship;
 
 # cp -rv fish/fish_history ~/.local/share/fish/; // https://drive.google.com/file/d/1SviusRFELzNDuL9Ne6M5RcsU5j9_Pp79/view?usp=sharing
 
@@ -117,8 +122,8 @@ cp -rv pulse.conf ~/.config/pulse/daemon.conf;
 cp -rv SimpleScreenRecorder/.ssr ~/;
 cp -rv lsd/config.yaml ~/.config/lsd/;
 
-cp -rv .tmux.conf ~/;
-tmux source ~/.tmux.conf;
+# cp -rv .tmux.conf ~/;
+# tmux source ~/.tmux.conf;
 
 chsh -s /usr/bin/fish;
 
@@ -130,11 +135,12 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm;
 # curl https://rclone.org/install.sh | sudo bash;
 
 # nodejs
-curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash - && sudo apt install -y nodejs && \
+curl -sL https://deb.nodesource.com/setup_19.x | sudo -E bash - && sudo apt install -y nodejs && \
 echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
 
 # global npm packages
 sudo npm i -g -d \
+@githubnext/github-copilot-cli \
 begynner \
 easy-rename \
 gtop \
@@ -146,13 +152,13 @@ svgo \
 vercel;
 
 # pfetch
-{
-  mkdir ~/temp && cd ~/temp && \
-  git clone https://github.com/dylanaraps/pfetch && \
-  cd pfetch && \
-  sudo cp -v pfetch /usr/bin && \
-  cd ~ && rm -rf ~/temp;
-}
+# {
+#   mkdir ~/temp && cd ~/temp && \
+#   git clone https://github.com/dylanaraps/pfetch && \
+#   cd pfetch && \
+#   sudo cp -v pfetch /usr/bin && \
+#   cd ~ && rm -rf ~/temp;
+# }
 
 # nerd fonts
 {
@@ -198,14 +204,14 @@ vercel;
 }
 
 # Gens/GS
-{
-  sudo dpkg --add-architecture i386;
-  mkdir ~/temp && cd ~/temp && \
-  wget "https://retrocdn.net/images/e/e9/Gens_2.16.8-r7orig_amd64.deb" -O gen-gs.deb && sudo dpkg -i gens.deb && \
-  cd ~ && rm -rf ~/temp;
-} || {
-  sudo apt --fix-broken install && rm -rf ~/temp;
-}
+# {
+#   sudo dpkg --add-architecture i386;
+#   mkdir ~/temp && cd ~/temp && \
+#   wget "https://retrocdn.net/images/e/e9/Gens_2.16.8-r7orig_amd64.deb" -O gen-gs.deb && sudo dpkg -i gens.deb && \
+#   cd ~ && rm -rf ~/temp;
+# } || {
+#   sudo apt --fix-broken install && rm -rf ~/temp;
+# }
 
 # vscode
 {
