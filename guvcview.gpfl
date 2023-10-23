@@ -14,7 +14,7 @@ ID{0x00980913};CHK{0:255:1:0}=VAL{0}
 #Power Line Frequency
 ID{0x00980918};CHK{0:2:1:2}=VAL{2}
 #White Balance Temperature
-ID{0x0098091a};CHK{2000:7500:10:4000}=VAL{4460}
+ID{0x0098091a};CHK{2000:7500:10:4000}=VAL{4350}
 #Sharpness
 ID{0x0098091b};CHK{0:255:1:128}=VAL{8}
 #Backlight Compensation
@@ -30,7 +30,7 @@ ID{0x009a0908};CHK{-36000:36000:3600:0}=VAL{-10800}
 #Tilt, Absolute
 ID{0x009a0909};CHK{-36000:36000:3600:0}=VAL{-7200}
 #Focus, Absolute
-ID{0x009a090a};CHK{0:255:5:0}=VAL{20}
+ID{0x009a090a};CHK{0:255:5:0}=VAL{10}
 #Focus, Automatic Continuous
 ID{0x009a090c};CHK{0:1:1:1}=VAL{1}
 #Zoom, Absolute
