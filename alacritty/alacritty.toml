@@ -1,0 +1,27 @@
+import = ["~/.config/alacritty/plugins/dracula.toml"]
+
+[shell]
+program = "/bin/bash"
+args = ["-l", "-c", "zellij attach || zellij"]
+
+[window]
+opacity = 0.95
+
+[font]
+normal = { family = "Iosevka Nerd Font", style = "Bold" }
+bold = { family = "Iosevka Nerd Font", style = "Bold" }
+size = 15.0
+
+[selection]
+save_to_clipboard = true
+
+[cursor]
+style = { shape = "Beam", blinking = "Always" }
+blink_interval = 400
+blink_timeout = 0
+
+[terminal]
+osc52 = "CopyPaste"
+
+[scrolling]
+history = 50000
