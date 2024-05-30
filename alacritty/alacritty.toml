@@ -1,15 +1,15 @@
-import = ["~/.config/alacritty/plugins/dracula.toml"]
+import = ["~/.config/alacritty/plugins/gruvbox-dark.toml"]
 
 [shell]
 program = "/bin/bash"
 args = ["-l", "-c", "zellij attach || zellij"]
 
 [window]
-opacity = 0.95
+opacity = 1
 
 [font]
-normal = { family = "Iosevka Nerd Font", style = "Bold" }
-bold = { family = "Iosevka Nerd Font", style = "Bold" }
+normal = { family = "BitstromWera Nerd Font" }
+bold = { family = "BitstromWera Nerd Font", style = "Bold" }
 size = 15.0
 
 [selection]
