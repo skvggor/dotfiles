@@ -2,12 +2,13 @@ import = ["~/.config/alacritty/plugins/gruvbox-dark.toml"]
 
 [shell]
 program = "/bin/bash"
-args = ["-l", "-c", "zellij attach || zellij --session 影"]
+args = ["-l", "-c", "zellij delete-all-sessions && zellij attach || zellij --session 影"]
 
 [window]
 opacity = 1
-padding = { x = 5, y = 5 }
+padding = { x = 25, y = 25 }
 dynamic_padding = true
+decorations = "None"
 
 [font]
 normal = { family = "BitstromWera Nerd Font" }
